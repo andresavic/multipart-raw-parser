@@ -1,0 +1,19 @@
+{
+  "presets": ["latest"],
+  "plugins": [
+    "syntax-flow",
+    "transform-object-rest-spread",
+    "transform-flow-strip-types",
+    "transform-class-properties",
+    ["flow-runtime", { "assert": true, "annotate": true }],
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }],
+    ["module-resolver", {
+        "root": ["./src"]
+    }]
+  ]
+}
