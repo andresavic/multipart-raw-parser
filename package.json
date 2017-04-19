@@ -1,0 +1,59 @@
+{
+  "name": "multipart-raw-parser",
+  "author": "Justin Brottes",
+  "description": "A Javascript multipart/<whatever> raw parser",
+  "version": "0.1.0",
+  "keywords": ["parser", "raw", "multipart", "response", "content", "parsing", "data"],
+  "private": false,
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:watch": "jest --watch",
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2016,latest\"",
+    "start": "babel-node ./node_modules/.bin/webpack && node build/main.js",
+    "build": "babel-node ./node_modules/.bin/webpack"
+  },
+  "dependencies": {
+    "flow-runtime": "^0.10.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-flow-runtime": "^0.2.1",
+    "babel-plugin-module-resolver": "^2.4.0",
+    "babel-plugin-resolver": "^1.1.0",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-import-resolver-babel-module": "^2.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jasmine": "^2.2.0",
+    "eslint-plugin-jest": "^1.0.2",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "express-http-proxy": "^0.10.1",
+    "express-jwt": "^5.1.0",
+    "flow-bin": "^0.37.4",
+    "fs-promise": "^2.0.0",
+    "i18n-iso-countries": "^1.8.1",
+    "jest-cli": "^18.1.0",
+    "node-loader": "^0.6.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.1.0-beta.28"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    }
+  }
+}
