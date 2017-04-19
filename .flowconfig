@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/nock/node_modules/.*
+.*/node_modules/flow-runtime/src/.*
+.*/node_modules/flow-runtime/suggest-test.js
+.*/node_modules/babel-plugin-flow-runtime/src/.*
+.*/node_modules/babel-plugin-flow-runtime/tools/.*
+
+[libs]
+decls/
+flow-typed/
+
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
