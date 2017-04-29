@@ -22,7 +22,7 @@
     "README.md"
   ],
   "private": false,
-  "main": "build/main.js",
+  "main": "build/index.js",
   "scripts": {
     "commit": "git-cz",
     "lint": "eslint src",
@@ -30,8 +30,7 @@
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch",
     "dev": "nodemon -w src --exec \"babel-node src --presets es2016,latest\"",
-    "start": "babel-node ./node_modules/.bin/webpack && node build/main.js",
-    "build": "babel-node ./node_modules/.bin/webpack",
+    "build": "babel --out-dir build --ignore *.test.js src",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
@@ -70,8 +69,7 @@
     "node-loader": "^0.6.0",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1",
-    "semantic-release": "^6.3.2",
-    "webpack": "^2.1.0-beta.28"
+    "semantic-release": "^6.3.2"
   },
   "jest": {
     "transform": {

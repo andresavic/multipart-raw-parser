@@ -13,8 +13,6 @@
 
 [The multipart raw parser](https://github.com/Wing-eu/multipart-raw-parser) is a helper function to parse a multipart/*whatever* Content-Type from any HttpRequest response.
 
-It is tiny (2kB, including dependencies).
-
 ## Installation
 
 Install the npm module:
@@ -73,7 +71,7 @@ try {
 
 ## Development
 
-To run demo locally on localhost:8080:
+To run the function locally:
 
 ``` bash
 npm install
