@@ -19,7 +19,7 @@ type HeaderObject = {
 
 type MultipartParsedObject = {
   index: number,
-  value: string,
+  value?: string,
   headers?: Array<HeaderObject>,
 }
 
@@ -77,10 +77,10 @@ const parse = (body: string, contentType: string): Array<MultipartParsedObject> 
   // Parse content using the boundary and remove empty element
   const contents = rawBody.split(new RegExp(boundary)).filter(Boolean)
 
-  return contents.map((content, index) => {
+  const res = contents.map((content, index) => {
     const subparts = content.split('\r\n\r\n')
     const headers = subparts[0].split('\r\n').filter(Boolean)
-    const value = subparts[1]
+    const value = (subparts[1] ? subparts[1] : '')
     const headerFields = parseHeader(headers)
     // @TODO Convert value content using the right content-type available in headers
     // or let it as a string
@@ -91,6 +91,8 @@ const parse = (body: string, contentType: string): Array<MultipartParsedObject> 
       headers: headerFields,
     }
   })
+
+  return res
 }
 
 export {
