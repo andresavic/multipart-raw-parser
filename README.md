@@ -86,7 +86,6 @@ Keep CI tests passing by running `npm run test` or `npm run test:watch` and `npm
 
 We actively welcome pull requests.
 
-
 ## Change Log
 
 This project adheres to [Semantic Versioning](http://semver.org/).  
