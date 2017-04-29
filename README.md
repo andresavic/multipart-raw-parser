@@ -50,6 +50,27 @@ sdbjkcndsjkvbdjs...
 
 Basic usage example:
 
+``` javascript
+import fetch from 'fetch'
+import { parse } from 'multipart-raw-parser'
+
+try {
+  const response = await fetch('https://wh.at/raw')
+  const multipartDataArray = parse(response, response.headers.get('Content-Type'))
+  console.log(multipartDataArray)
+  // [...{
+  //    index: 1,
+  //    headers: [{
+  //      name: 'Content-Type',
+  //      value: 'application/octet-stream'
+  //    }, ...],
+  //    value: 'sdbjkcndsjkvbdjs...'
+  // }]
+} catch (e) {
+  throw (e)
+}
+```
+
 ## Development
 
 To run demo locally on localhost:8080:
