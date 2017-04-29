@@ -36,7 +36,7 @@ const parseBoundary = (contentType: string): string => {
   }
 
   const boundary = boundaryParsingResult[1] || boundaryParsingResult[2]
-  console.log(boundary)
+
   // \r\n is part of the boundary.
   return `\r\n--${boundary}`
 }
