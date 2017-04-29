@@ -22,7 +22,8 @@
     "no-console": 0,
     "global-require": 0,
     "semi": [1, "never"],
-    "max-len": ["error", 140]
+    "max-len": ["error", 140],
+    "no-bitwise": "off"
   },
   "plugins": [
     "jest",
