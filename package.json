@@ -22,7 +22,7 @@
     "README.md"
   ],
   "private": false,
-  "main": "src/index.js",
+  "main": "build/main.js",
   "scripts": {
     "commit": "git-cz",
     "lint": "eslint src",
