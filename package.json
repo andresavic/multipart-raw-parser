@@ -1,12 +1,13 @@
 {
   "name": "multipart-raw-parser",
+  "description": "A Javascript multipart/<whatever> raw parser",
+  "version": "0.0.0-semantically-released",
   "author": "Justin Brottes <justin.brottes@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/lucmerceron/react-size-fetcher#readme",
   "bugs": {
     "url": "https://github.com/Wing-eu/multipart-raw-parser/issues"
   },
-  "description": "A Javascript multipart/<whatever> raw parser",
-  "version": "0.0.0-semantically-released",
   "keywords": [
     "parser",
     "raw",
