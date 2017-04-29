@@ -1,5 +1,5 @@
 {
-  "name": "@wing-eu/multipart-raw-parser",
+  "name": "multipart-raw-parser",
   "description": "A Javascript multipart/<whatever> raw parser",
   "version": "0.0.0-semantically-released",
   "author": "Justin Brottes <justin.brottes@gmail.com>",
