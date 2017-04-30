@@ -20,11 +20,15 @@ Install the npm module:
   $ npm install multipart-raw-parser --save
 ```
 
-## Usage
+## Documentation
 
-The function takes the response `Content-Type` header and the response `body`.
 
-A multipart/*whatever* response is composed for each content of a `boundary identifier`, `headers` and `contents`:
+### Arguments
+ * `contentType`: The response header `Content-Type`.
+ * `body`: The response body as a string containing all multipart data parts.
+
+ A multipart/*whatever* response is composed for each content of a `boundary identifier`, `headers` and `contents`:
+
 ``` bash
 --uuid:2e6eb930-a6da-43e2-850c-ce98e3bbdb16
 Content-Type: application/xop+xml; charset=UTF-8; type="text/xml";
@@ -46,7 +50,12 @@ sdbjkcndsjkvbdjs...
 ```
 **NOTE**: The function will not process any form which do not contain a boundary identifier (`--id:...`).
 
-Basic usage example:
+### Returns
+
+An array of objects composed of an index representing the position of the part in the `body` parameters, the part value and a array of object containing parsed headers.
+
+### Example
+Here is a simple way to use the library:
 
 ``` javascript
 import fetch from 'fetch'
@@ -80,13 +89,11 @@ npm run dev
 
 Keep CI tests passing by running `npm run test` or `npm run test:watch` and `npm run lint` often.
 
-## Contribute
-
-We actively welcome pull requests.
-
 ## Change Log
 
-This project adheres to [Semantic Versioning](http://semver.org/).  
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+You can find every release documented on the [Releases](https://github.com/Wing-eu/multipart-raw-parser/releases) page.
 
 ## License
 

@@ -3,7 +3,7 @@
 */
 
 /**
- * Convert a string
+ * Convert a buffer to string
  * @param  {string}  body Response string
  * @return {string}
  */

@@ -4,6 +4,7 @@
 .*/node_modules/flow-runtime/suggest-test.js
 .*/node_modules/babel-plugin-flow-runtime/src/.*
 .*/node_modules/babel-plugin-flow-runtime/tools/.*
+.*test.js.*
 
 [libs]
 decls/

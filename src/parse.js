@@ -30,15 +30,16 @@ type MultipartParsedObject = {
  * @return {String}
  */
 const parseBoundary = (contentType: string): string => {
-  const boundaryParsingResult = contentType.match(REGEX_PARSE_BOUNDARY)
-  if (!boundaryParsingResult) {
+  const arrayResults = contentType.match(REGEX_PARSE_BOUNDARY)
+
+  if (!arrayResults) {
     throw new Error('Bad content-type header, no multipart boundary')
   }
 
-  const boundary = boundaryParsingResult[1] || boundaryParsingResult[2]
+  const boundary = arrayResults[1]
 
   // \r\n is part of the boundary.
-  return `\r\n--${boundary}`
+  return String(`\r\n--${boundary}`)
 }
 
 
@@ -48,7 +49,7 @@ const parseBoundary = (contentType: string): string => {
  * @return {Array<HeaderObject>}
  */
 const parseHeader = (headers: Array<string>): Array<HeaderObject> => headers.map((header: string): HeaderObject => {
-  const matchResult = header.match(REGEX_PARSE_HEADER)
+  const matchResult: ?Array<string> = header.match(REGEX_PARSE_HEADER)
   if (!matchResult) {
     return {}
   }
@@ -64,14 +65,15 @@ const parseHeader = (headers: Array<string>): Array<HeaderObject> => headers.map
  */
 const parse = (body: string, contentType: string): Array<MultipartParsedObject> => {
   // Parse body boundary
-  const boundary = parseBoundary(contentType)
+  const boundary: string = parseBoundary(contentType)
 
   // Convert and work on body if type is not a raw string
-  const isRaw = (typeof (body) !== 'string')
+  // const isRaw = (typeof (body) !== 'string')
   let rawBody: string = body
-  if (isRaw) {
-    rawBody = convertToRaw(body, isRaw)
-  }
+
+  // if (isRaw) {
+  //   rawBody = convertToRaw(body, isRaw)
+  // }
   // Prepend what has been stripped by the body parsing mechanism.
   rawBody = (`\r\n${rawBody}`)
   // Parse content using the boundary and remove empty element
