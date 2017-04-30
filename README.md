@@ -7,7 +7,7 @@
 [npm-url]: https://badge.fury.io/js/multipart-raw-parser
 [downloads-image]: https://img.shields.io/npm/dm/multipart-raw-parser.svg
 [downloads-url]: https://npmjs.org/package/multipart-raw-parser
-[coverage-image]: https://img.shields.io/codecov/c/github/Wing-eu/multipart-raw-parser.svg?branch=master
+[coverage-image]: https://codecov.io/gh/Wing-eu/multipart-raw-parser/branch/master/graph/badge.svg?branch=master
 [coverage-url]: https://codecov.io/gh/Wing-eu/multipart-raw-parser?branch=master
 
 

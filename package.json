@@ -32,7 +32,8 @@
     "dev": "nodemon -w src --exec \"babel-node src --presets es2016,latest\"",
     "build": "babel --out-dir build --ignore *.test.js src",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 50 --lines 50"
+    "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 50 --lines 50",
+    "report-coverage": "cat ./coverage/lcov.info | codecov"
   },
   "dependencies": {
     "flow-runtime": "^0.10.0"
