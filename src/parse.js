@@ -29,7 +29,7 @@ type MultipartParsedObject = {
  * @param  {String}  contentType The response global content-type
  * @return {String}
  */
-export const parseBoundary = (contentType: string): string => {
+const parseBoundary = (contentType: string): string => {
   const arrayResults = contentType.match(REGEX_PARSE_BOUNDARY)
 
   if (!arrayResults) {
@@ -48,7 +48,7 @@ export const parseBoundary = (contentType: string): string => {
  * @param  {Array<String>}  headers HeaderObject array
  * @return {Array<HeaderObject>}
  */
-export const parseHeader = (headers: Array<string>): Array<HeaderObject> => headers.map((header: string): HeaderObject => {
+const parseHeader = (headers: Array<string>): Array<HeaderObject> => headers.map((header: string): HeaderObject => {
   const matchResult: ?Array<string> = header.match(REGEX_PARSE_HEADER)
   if (!matchResult) {
     return {}
@@ -97,4 +97,8 @@ const parse = (body: string, contentType: string): Array<MultipartParsedObject> 
   return res
 }
 
-export default parse
+export {
+  parse,
+  parseBoundary,
+  parseHeader,
+}

@@ -4,9 +4,10 @@
 
 import fs from 'fs-promise'
 
-import parse, {
+import {
   parseBoundary,
   parseHeader,
+  parse,
 } from 'parse'
 
 describe('parse', () => {
