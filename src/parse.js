@@ -2,9 +2,9 @@
 * @flow
 */
 
-import {
-  convertToRaw,
-} from 'helpers'
+// import {
+//   convertToRaw,
+// } from 'helpers'
 
 import {
   REGEX_PARSE_BOUNDARY,
@@ -29,7 +29,7 @@ type MultipartParsedObject = {
  * @param  {String}  contentType The response global content-type
  * @return {String}
  */
-const parseBoundary = (contentType: string): string => {
+export const parseBoundary = (contentType: string): string => {
   const arrayResults = contentType.match(REGEX_PARSE_BOUNDARY)
 
   if (!arrayResults) {
@@ -48,7 +48,7 @@ const parseBoundary = (contentType: string): string => {
  * @param  {Array<String>}  headers HeaderObject array
  * @return {Array<HeaderObject>}
  */
-const parseHeader = (headers: Array<string>): Array<HeaderObject> => headers.map((header: string): HeaderObject => {
+export const parseHeader = (headers: Array<string>): Array<HeaderObject> => headers.map((header: string): HeaderObject => {
   const matchResult: ?Array<string> = header.match(REGEX_PARSE_HEADER)
   if (!matchResult) {
     return {}
@@ -97,8 +97,4 @@ const parse = (body: string, contentType: string): Array<MultipartParsedObject> 
   return res
 }
 
-export {
-  parse,
-  parseBoundary,
-  parseHeader,
-}
+export default parse

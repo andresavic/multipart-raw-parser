@@ -4,10 +4,9 @@
 
 import fs from 'fs-promise'
 
-import {
+import parse, {
   parseBoundary,
   parseHeader,
-  parse,
 } from 'parse'
 
 describe('parse', () => {
@@ -25,13 +24,9 @@ describe('parse', () => {
 
 describe('parseBoundary', () => {
   it('should return a string', async () => {
-    try {
-      const contentType = await fs.readFile('ressources/header', 'utf-8')
-      const results = parseBoundary(contentType)
-      expect(typeof results).toBe('string')
-    } catch (e) {
-      console.log(e)
-    }
+    const contentType = await fs.readFile('ressources/header', 'utf-8')
+    const results = parseBoundary(contentType)
+    expect(typeof results).toBe('string')
   })
 
   it('should throw an exception', async () => {
@@ -47,16 +42,12 @@ describe('parseBoundary', () => {
 
 describe('parseHeader', () => {
   it('should return an array of results', async () => {
-    try {
-      const headers = [
-        'Content-Type: application/octet-stream',
-        'Content-Transfer-Encoding: binary',
-        'Content-ID: <cc4451c7-9084-401b-b20d-c40331c4c43d-47984@cxf.apache.org>'
-      ]
-      const results = parseHeader(headers)
-      expect(results).toBeInstanceOf(Array)
-    } catch (e) {
-      console.log(e)
-    }
+    const headers = [
+      'Content-Type: application/octet-stream',
+      'Content-Transfer-Encoding: binary',
+      'Content-ID: <cc4451c7-9084-401b-b20d-c40331c4c43d-47984@cxf.apache.org>'
+    ]
+    const results = parseHeader(headers)
+    expect(results).toBeInstanceOf(Array)
   })
 })
