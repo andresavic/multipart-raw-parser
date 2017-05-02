@@ -4,9 +4,9 @@
   "version": "0.0.0-semantically-released",
   "author": "Justin Brottes <justin.brottes@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/lucmerceron/react-size-fetcher#readme",
+  "homepage": "https://github.com/wing-eu/multipart-raw-parser#readme",
   "bugs": {
-    "url": "https://github.com/Wing-eu/multipart-raw-parser/issues"
+    "url": "https://github.com/wing-eu/multipart-raw-parser/issues"
   },
   "keywords": [
     "parser",
