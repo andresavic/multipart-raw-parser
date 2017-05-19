@@ -74,7 +74,7 @@
     "node-loader": "^0.6.0",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^6.3.6"
   },
   "jest": {
     "transform": {
