@@ -1,5 +1,5 @@
 # Multipart Raw Parser
-[![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![coverages][coverage-image]][coverage-url] [![downloads][downloads-image]][downloads-url]
+[![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![coverages][coverage-image]][coverage-url] [![downloads][downloads-image]][downloads-url] [![Commitizen friendly][cf-image]][cf-url] [![semantic-release][sm-image]][sm-url]
 
 [travis-image]: https://travis-ci.org/wing-eu/multipart-raw-parser.svg?branch=master
 [travis-url]: https://travis-ci.org/wing-eu/multipart-raw-parser
@@ -9,6 +9,10 @@
 [downloads-url]: https://npmjs.org/package/multipart-raw-parser
 [coverage-image]: https://codecov.io/gh/wing-eu/multipart-raw-parser/branch/master/graph/badge.svg?branch=master
 [coverage-url]: https://codecov.io/gh/wing-eu/multipart-raw-parser?branch=master
+[cf-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+[cf-url]: http://commitizen.github.io/cz-cli/
+[sm-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[sm-url]: https://github.com/semantic-release/semantic-release
 
 
 [The multipart raw parser](https://github.com/Wing-eu/multipart-raw-parser) is a helper function to parse a multipart/*whatever* Content-Type from any HttpRequest response.
